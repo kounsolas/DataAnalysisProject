@@ -17,3 +17,4 @@ p(3)=diamesos(winter_bikes,autumn_bikes,"Winter","Autumn");
 p(4)=diamesos(spring_bikes,summer_bikes,"Spring","Summer");
 p(5)=diamesos(spring_bikes,autumn_bikes,"Spring","Autumn");
 p(6)=diamesos(summer_bikes,autumn_bikes,"Summer","Autumn");
+%geia sou
