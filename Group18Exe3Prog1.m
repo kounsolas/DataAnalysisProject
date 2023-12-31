@@ -13,9 +13,9 @@ for i=1:24
     autumn_bikes(:,i)=table2array(data(data.Seasons==4 & data.Hour==i-1,"Rented Bike Count"));
 end
 
-coloramps(winter_bikes,"Winter");
-coloramps(spring_bikes,"Spring");
-coloramps(summer_bikes,"Summer");
-coloramps(autumn_bikes,"Autumn");
+Group18Exe3Fun1(winter_bikes,"Winter");
+Group18Exe3Fun1(spring_bikes,"Spring");
+Group18Exe3Fun1(summer_bikes,"Summer");
+Group18Exe3Fun1(autumn_bikes,"Autumn");
 
 %spring-autumn sxedon idia
