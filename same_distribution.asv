@@ -1,0 +1,19 @@
+function sd_rate=same_distribution(M,bikes1,bikes2)
+for i=1:M
+
+    bikes_sample1 = zeros(M,1);
+    bikes_sample2 = zeros(M,1);
+    for j=1:100
+        bikes_sample1(j,1) = bikes_s1(randi([1 length(bikes_s1)]));
+        bikes_sample2(j,1) = bikes_s2(randi([1 length(bikes_s2)]));
+    end
+vectors1=randperm(length(bikes1),100);
+vectors2=randperm(length(bikes2),100);
+vectors=randperm(min(length(bikes1),length(bikes2)),100);
+bikes1=bikes1(vectors1);
+bikes2=bikes2(vectors);
+h(i)=chi2gof(bikes1,"Expected",bikes2);
+end
+sum_h=sum(h);%h=1 for rejection
+sd_rate=(M-sum_h)*100/M;
+end
