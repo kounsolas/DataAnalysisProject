@@ -14,6 +14,7 @@ for i=1:24
     summer_bikes(:,i)=table2array(data(data.Seasons==3 & data.Hour==i-1,"Rented Bike Count"));
     autumn_bikes(:,i)=table2array(data(data.Seasons==4 & data.Hour==i-1,"Rented Bike Count"));
 end
+     
 
 p(1)=Group18Exe4Fun1(winter_bikes,spring_bikes,"Winter","Spring");
 p(2)=Group18Exe4Fun1(winter_bikes,summer_bikes,"Winter","Summer");
