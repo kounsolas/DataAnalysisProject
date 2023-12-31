@@ -1,0 +1,5 @@
+Data Analysis
+
+Important Functions
+
+histfit() : Histogram with a distribution fit
