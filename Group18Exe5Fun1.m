@@ -1,7 +1,7 @@
 %Kounsolas Xristos
 %Plevridi Vasiliki Varvara
 
-function [r,relationship,direction]=Group18Exe5Fun1(bikes)
+function [r,relationship,direction,h]=Group18Exe5Fun1(bikes)
 for i=1:24
         ro=corrcoef(bikes(:,2*i-1),bikes(:,2*i));
         r(i)=ro(1,2);
@@ -29,5 +29,22 @@ for i=1:24
         relationship(i)= 1;
     end    
 end
+
+a=0.05;
+n=length(bikes);
+z=0.5*log((1+r(i))/(1-r(i)));
+t=norminv(1-a/2);
+
+%διάστημα εμπιστοσύνης
+
+low_z=z-t*sqrt(1/(n-3));
+high_z=z+t*sqrt(1/(n-3));
+
+low_r(i)=(exp(2*low_z)-1)/(exp(2*low_z)+1);
+high_r(i)=(exp(2*high_z)-1)/(exp(2*high_z)+1);
+
+t = r(i) * sqrt((n-2)/(1-r(i)^2));
+tc = tinv(1-a/2, n-2);
+h(i)=abs(t)<tc;
 
 end
