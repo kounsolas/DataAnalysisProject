@@ -6,7 +6,7 @@ histfit() : Histogram with a distribution fit
 
 plot([x_start x_finish],[y_start y_finish],'color') : plot a straight line from point (x_start,y_start) to (x_finish,y_finish) with the given color
 
-[h,p,ci] = ttest(sample,mean,'Alpha',value_of_a)    : Test the null hypothesis that the sample data are from a population with mean 'mean' at the 'value_of_alpha'% significance level.
+[h,p,ci] = ttest(sample,mean,'Alpha',value_of_a)    : Test the null hypothesis that the sample data are from a population with mean 'mean' at the 'value_of_alpha'%       significance level.
       					              The result h is 1 if the test rejects the null hypothesis at the given significance level, and 0 otherwise.
                                                       ci (2x1) arrays stores the lower and upper bound of the confidence interval 
 
@@ -22,12 +22,21 @@ plot([x_start x_finish],[y_start y_finish],'color') : plot a straight line from 
 
 boxplot(sample)                                     : Creates a box plot of the data in sample. If sample is a vector, boxplot plots one box. If sample is a matrix, boxplot plots one box for each column of sample. 
 
-x = tinv(p,nu)                                      : Returns the inverse cumulative distribution function (icdf) of the Student's t distribution evaluated at the probability values in p using the corresponding degrees of freedom in nu. 
+x = tinv(p,nu)                                      : Returns the inverse cumulative distribution function (icdf) of the Student's t distribution evaluated at the probability                                                                                   
+                                                      values in p using the corresponding degrees of freedom in nu.  
 
 P = prctile(A,p)                                    : Returns percentiles of elements in input data A for the percentages p in the interval [0,100].
 
 bootci() ??
 
+R = mvnrnd(mu, Cov_matrix,n)                        : Returns a matrix R of n random vectors chosen from the same multivariate normal distribution, 
+                                                      with mean vector mu and covariance matrix 'Cov_matrix'.
+                                                      (n) Number of multivariate random numbers, specified as a positive scalar integer. n specifies the number of rows in R.
+
+R = corrcoef(A)                                     : Returns the matrix of correlation coefficients for A, 
+                                                      where the columns of A represent random variables and the rows represent observations.
+
+x = norminv(p,mu,sigma)                             : Returns the inverse of the normal cdf with mean mu and standard deviation sigma, evaluated at the probability values in p.
 
 
 
@@ -51,3 +60,12 @@ answer: νομίζω ναι
 
 ερώτημα 3ο: γιατί 276 ζευγάρια; Μήπως εννοεί (24 *24=) 576
 answer: ουσιαστικά ο πίνακας που θα προκύψει θα είναι συμμετρικός με την διαγώνιο να είναι επίσης άχρηστη γιατί θα υπολογίζει την διαφορά ανάμεσα σε αυτό και στο ίδιο. Άρα: (576-24)/2=276 ζευγάρια
+
+ερώτημα 4ο: Όταν κάνω ένα τεστ υπόθεσης, τι σημαίνει η τιμή p;
+Απάντηση: Στα τεστ υπόθεσης, η τιμή p αντιπροσωπεύει την πιθανότητα να παρατηρηθούν τα παρατηρούμενα δεδομένα ή πιο έκτακτα αποτελέσματα, υπό την υπόθεση ότι η μηδενική υπόθεση είναι αληθής. Αν η τιμή p είναι πολύ μικρή (συνήθως ≤ 0,05), υποδεικνύει ότι τα παρατηρούμενα δεδομένα είναι απίθανο να προκύψουν από τυχαία τύχη, υποθέτοντας ότι η μηδενική υπόθεση είναι αληθής. Σε αυτήν την περίπτωση, μπορείτε να απορρίψετε τη μηδενική υπόθεση. Αν η τιμή p είναι μεγάλη, υποδεικνύει ότι τα παρατηρούμενα δεδομένα είναι πιθανό να προκύψουν από τυχαία τύχη, και δεν υπάρχει αρκετή απόδειξη για να απορρίψετε τη μηδενική υπόθεση.
+
+
+
+
+
+
