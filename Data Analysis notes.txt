@@ -1,9 +1,47 @@
 Data Analysis
-
-Important Functions
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT FUNCTIONS
 
 histfit() : Histogram with a distribution fit
 
+plot([x_start x_finish],[y_start y_finish],'color') : plot a straight line from point (x_start,y_start) to (x_finish,y_finish) with the given color
+
+[h,p,ci] = ttest(sample,mean,'Alpha',value_of_a)    : Test the null hypothesis that the sample data are from a population with mean 'mean' at the 'value_of_alpha'% significance level.
+      					              The result h is 1 if the test rejects the null hypothesis at the given significance level, and 0 otherwise.
+                                                      ci (2x1) arrays stores the lower and upper bound of the confidence interval 
+
+[h,p,ci] = vartest(sample,variance,value_of_alpha)  : Returns a test decision for the null hypothesis that the data in vector 'sample' comes from a normal distribution with variance 'variance;, using the chi-square variance test.
+                                                      The alternative hypothesis is that x comes from a normal distribution with a different variance. 
+                                                      The result h is 1 if the test rejects the null hypothesis at the 'value_of_alpha'% significance level, and 0 otherwise.
+                                                      ci (2x1) array stores the lower and upper bound of the confidence interval
+
+[h,p,stats] = chi2gof(sample)  		            : Returns a test decision for the null hypothesis that the data in vector 'sample' comes from a normal distribution with a mean and variance estimated from x, using the chi-square                                                   
+                                                      goodness-of-fit test. 
+                                                      The alternative hypothesis is that the data does not come from such a distribution. 
+                                                      The result h is 1 if the test rejects the null hypothesis at the 5% significance level, and 0 otherwise. Also returns the p value of the hypothesis test
+
+boxplot(sample)                                     : Creates a box plot of the data in sample. If sample is a vector, boxplot plots one box. If sample is a matrix, boxplot plots one box for each column of sample. 
+
+x = tinv(p,nu)                                      : Returns the inverse cumulative distribution function (icdf) of the Student's t distribution evaluated at the probability values in p using the corresponding degrees of freedom in nu. 
+
+P = prctile(A,p)                                    : Returns percentiles of elements in input data A for the percentages p in the interval [0,100].
+
+bootci() ??
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ΘΕΩΡΕΙΑ
+
+Bootstrap : 
+- Οι επαναλήψεις bootstrap µας επιτρέπουν να εκτιµήσουµε το τυπικό σφάλµα σθˆ για OΠΟΙΟΔΗΠΟΤΕ στατιστικό θˆ.
+- Τα παραµετρικά δ.ε. είναι ακριβή όταν ικανοποιούνται οι υποθέσεις για τη χρήση τους, όπως π.χ. κανονική κατανοµή της τ.µ. X για το δ.ε. της µ µε χρήση της κατανοµής student.
+  Σε αυτήν την περίπτωση δεν υπάρχει λόγος να προτιµηθεί το bootstrap δ.ε. Σε περιπτώσεις όµως που οι υποθέσεις για τη χρήση του παραµετρικού δ.ε. δεν ικανοποιούνται, 
+  το bootstrap δ.ε. αποτελεί τη µέθοδο που ϑα πρέπει να προτιµηθεί.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ΕΡΩΤΟΑΠΑΝΤΗΣΕΙΣ
 ερώτημα 1ο: ανάμεσα σε διαφορετικές κατανομές, κάνοντας χρήση του αντίστοιχου στατιστικού ελέγχου X2, η καλύτερη προσεγγίσιμη είναι αυτή με την μεγαλύτερη τιμή p;
