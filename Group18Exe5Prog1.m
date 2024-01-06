@@ -19,9 +19,9 @@ end
 
 %Dhmioyrgia pinakwn me tis zhtoymenes times
 [r(1,:),relationship(1,:),direction(1,:),h(1,:)]=Group18Exe5Fun1(winter_bikes);
-[r(2,:),relationship(2,:),direction(2,:)]=Group18Exe5Fun1(spring_bikes);
-[r(3,:),relationship(3,:),direction(3,:)]=Group18Exe5Fun1(summer_bikes);
-[r(4,:),relationship(4,:),direction(4,:)]=Group18Exe5Fun1(autumn_bikes);
+[r(2,:),relationship(2,:),direction(2,:),h(2,:)]=Group18Exe5Fun1(spring_bikes);
+[r(3,:),relationship(3,:),direction(3,:),h(3,:)]=Group18Exe5Fun1(summer_bikes);
+[r(4,:),relationship(4,:),direction(4,:),h(4,:)]=Group18Exe5Fun1(autumn_bikes);
 
 %Colormaps
-Group18Exe5Fun2(r,relationship,direction);
+Group18Exe5Fun2(r,relationship,direction,h);

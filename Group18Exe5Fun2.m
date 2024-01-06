@@ -1,7 +1,7 @@
 %Kounsolas Xristos
 %Plevridi Vasiliki Varvara
 
-function Group18Exe5Fun2(r,relationship,direction)
+function Group18Exe5Fun2(r,relationship,direction,h)
 %Colormaps
 %Colormap for linear Correlation
 figure();
@@ -63,6 +63,29 @@ clim([0, 1]);
 
 %Titles and Labels
 title("Colormap for linear Correlation-Direction","Rented Bike Count - Temperature(°C)");
+xlabel("Hours","FontWeight","bold");
+ylabel("Seasons","FontWeight","bold");
+
+% AXIS
+xticks(1:24);
+xtickangle(0);
+yticks(1:4);
+yticklabels({'Winter','Spring','Summer','Autumn'});
+ytickangle(90);
+
+%Colormap hypothessis testing for ρ=0
+figure();
+imagesc(h);
+colormap(lines(2));
+c1=colorbar;
+
+%Idiothtes colorbar
+c1.Ticks=[0,1];
+c1.TickLabels=["h=0","h=1"];
+clim([0, 1]);
+
+%Titles and Labels
+title("Colormap for linear Correlation-Hypothessis testing for ρ=0","Rented Bike Count - Temperature(°C)");
 xlabel("Hours","FontWeight","bold");
 ylabel("Seasons","FontWeight","bold");
 
