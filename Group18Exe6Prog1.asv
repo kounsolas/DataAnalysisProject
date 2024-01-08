@@ -7,7 +7,7 @@ close all;
 
 %with readtable the data type is a cell
 data=readtable("SeoulBike.xlsx",'VariableNamingRule','preserve');
-%POS GINETAI NA EXOUN TOSO YPSILI KAI TOSO XAMILI THERMOKRASIA ???????????
+
 for i=1:24
     %ta dedomena briskontai ana sthles, kathe zeygari dyo sthlwn
     %antistoixei se diaforetikh wra
@@ -17,11 +17,29 @@ for i=1:24
     autumn_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==4 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
 end 
 
-[p_out_GMIC, p_out_MIC] = Group18Exe6Fun1(spring_bikes_temperature);
+%calculate MIC-GMIC for every hour
+MIC = NaN*ones(24,1);
+GMIC = NaN*ones(24,1);
+for i=1:24
+    x=winter_bikes_temperature(:,2*i-1); %bikes
+    y=winter_bikes_temperature(:,2*i); %temperature
+    bins =  fix(sqrt(length(x)/5));
+    mutI=MutualInformationXY(x,y);
+    MIC(i)=mutI/log(bins);
+    ro=corrcoef(x,y);
+    r=ro(1,2);
+    GMI=-0.5*log(1-r^2);
+    GMIC(i)=GMI/log(bins);
+end
 
-%apo tin stigmi pou to p>>a simainei oti mporoume na poume oti yparxei
-%simantiki statistiki diafora metaksi ton pragmatikon kai ton tyxaion timon
-%ypostirizontas etsi tin simantikotita ton GMIC kai MIC
+%exo ypologisei to GMIC kai to MIC
+%thelo na kano elenxo simantikotitas gia ayta ta 2 me tyxaiopoiisi
+
+L=1000;
+M=100;
+
+
+
 
 
 
