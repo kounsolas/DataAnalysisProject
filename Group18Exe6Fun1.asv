@@ -71,7 +71,6 @@ function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
     out_GMIC(i) = (GMIC(i) < lV_GMIC_r(i) | GMIC(i) > uV_GMIC_r(i)); %
     end
     n_out_GMIC = len(find(out_GMIC))
-    p_out_GMIC = n_out_GMIC/24;
     
     % nomizw epistrefeis lathos value
     %p_out_GMIC=n_out_GMIC/L
