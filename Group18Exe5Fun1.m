@@ -2,14 +2,22 @@
 %Plevridi Vasiliki Varvara
 
 function [r,relationship,direction,h]=Group18Exe5Fun1(bikes)
+
+%arxikopoiisi ton vectors
+r = NaN * ones(24,1);
+direction = NaN*ones(24,1);
+relationship = NaN*ones(24,1);
+
 for i=1:24
-        ro=corrcoef(bikes(:,2*i-1),bikes(:,2*i));
-        r(i)=ro(1,2);
+    %brisko to r gia kathe ora tis imeras metaksi bikes kai temperature
+    ro=corrcoef(bikes(:,2*i-1),bikes(:,2*i));
+    r(i)=ro(1,2);
 
     %Direction
     if r(i)>=0
-        direction(i)=1;
-    else direction(i)=0;
+       direction(i)=1;
+    else 
+        direction(i)=0;
     end
 
     %relationship
@@ -32,19 +40,23 @@ end
 
 a=0.05;
 n=length(bikes);
-z=0.5*log((1+r(i))/(1-r(i)));
+%nomizo edo yparxei lathos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%etsi ops to exeis eisai ektos tou for loop kai kaneis oti kaneis mono gia
+%ena r, to teleytaio dld to r(24)
+%z=0.5*log((1+r(i))/(1-r(i)));
+z=0.5*log((1+r)./(1-r)); %5.3
 t=norminv(1-a/2);
 
 %διάστημα εμπιστοσύνης
 
-low_z=z-t*sqrt(1/(n-3));
-high_z=z+t*sqrt(1/(n-3));
+low_z=z-t*sqrt(1/(n-3)); %vectors
+high_z=z+t*sqrt(1/(n-3)); %vectors
 
-low_r(i)=(exp(2*low_z)-1)/(exp(2*low_z)+1);
-high_r(i)=(exp(2*high_z)-1)/(exp(2*high_z)+1);
+low_r=(exp(2.*low_z)-1)./(exp(2.*low_z)+1); %vectors 5.4
+high_r=(exp(2*high_z)-1)/(exp(2*high_z)+1); %vectors 5.4
 
-t = r(i) * sqrt((n-2)/(1-r(i)^2));
+t = r .* sqrt((n-2)./(1-r.^2));
 tc = tinv(1-a/2, n-2);
-h(i)=abs(t)<tc;
+h=abs(t)<tc; %eksigise mou tin theoreia piso apo ayto
 
 end
