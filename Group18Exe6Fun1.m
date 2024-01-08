@@ -43,6 +43,14 @@ function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
         end
     end
 
+    %ola ayta poy kaneis parakatw tha eprepe na ta kaneis gia kathe sthlh
+    %wste na katalhkseis en telei me enan pinaka GMIC_r 24x1 poy tha exei
+    %apotelesma gia kathe wra
+    %proteinw na mpei sto loop i=1:24 gia na typwthoyn sto telos kai ta 24
+    %zhtoymena diagrammata
+    %dhladh na ginetai to regress opwz zhtaei ( den kserw an thelei kai
+    %kati allo) kai txt poy tha exei tis dyo times gia kathe wra
+
     %exo ypologisei to GMIC kai to MIC
     %alla to GMIC_r kai to MIC_r poy prokyptei me tin methodo tyxaiopoisisi
 
@@ -52,7 +60,7 @@ function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
     %prota gia GMIC
     %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
     %prokyptei apo tin methodo tyxaiopoiisis
-    GMIC_r = sort(MIC_r);
+    GMIC_r = sort(MIC_r); %mallon ennoeis GMIC_r
     lowlim = round((a/2)*L);
     uplim = round((1-a/2)*L);
     lV_GMIC_r = GMIC_r(lowlim,:);
@@ -62,6 +70,8 @@ function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
     n_out_GMIC = length(find(GMIC < lV_GMIC_r | GMIC > uV_GMIC_r));
     p_out_GMIC = n_out_GMIC/24;
     
+    % nomizw epistrefeis lathos value
+    %p_out_GMIC=n_out_GMIC/L
     
     %gia to MIC
     %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
