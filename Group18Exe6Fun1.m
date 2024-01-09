@@ -1,14 +1,14 @@
-function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
+function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
     
     a =0.05;
     L=1000;
     %calculate MIC-GMIC for every hour
-    MIC = NaN*ones(24,1);
-    GMIC = NaN*ones(24,1);
+    %MIC = NaN*ones(24,1);
+    %GMIC = NaN*ones(24,1);
 
     %initialize GMIC and MIC for randomize method
-    MIC_r = NaN*ones(L,24);
-    GMIC_r = NaN*ones(L,24);
+    %MIC_r = NaN*ones(L,24);
+    %GMIC_r = NaN*ones(L,24);
 
     bikes = bikes_temperature(:,1:2:end);
     temperatures = bikes_temperature(:,2:2:end);
@@ -41,50 +41,51 @@ function[p_out_GMIC,p_out_MIC] = Group18Exe6Fun1(bikes_temperature)
             GM = -0.5*log(1-r_r^2);
             GMIC_r(j,i) = GM/log(bins);
         end
+
+        
     end
+        %exo ypologisei to GMIC kai to MIC
+        %alla to GMIC_r kai to MIC_r poy prokyptei me tin methodo tyxaiopoisisi
 
-    %ola ayta poy kaneis parakatw tha eprepe na ta kaneis gia kathe sthlh
-    %wste na katalhkseis en telei me enan pinaka GMIC_r 24x1 poy tha exei
-    %apotelesma gia kathe wra
-    %proteinw na mpei sto loop i=1:24 gia na typwthoyn sto telos kai ta 24
-    %zhtoymena diagrammata
-    %dhladh na ginetai to regress opwz zhtaei ( den kserw an thelei kai
-    %kati allo) kai txt poy tha exei tis dyo times gia kathe wra
+        %prepei na sygkrino GMIC_r me GMIC
+        %kai MIC_r me MIC
 
-    %exo ypologisei to GMIC kai to MIC
-    %alla to GMIC_r kai to MIC_r poy prokyptei me tin methodo tyxaiopoisisi
+        %prota gia GMIC
+        %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
+        %prokyptei apo tin methodo tyxaiopoiisis
+        GMIC_ro = sort(GMIC_r); 
+        lowlim = round((a/2)*L);
+        uplim = round((1-a/2)*L);
+        lV_GMIC_r = GMIC_r(lowlim,:); %vector 
+        uV_GMIC_r = GMIC_r(uplim,:); %vector
+        %elenxo an to arxiko GMIC gia kathe ora einai ontos toy a/2 kai 1-a/2
+        %ton GMIC_r
 
-    %prepei na sygkrino GMIC_r me GMIC
-    %kai MIC_r me MIC
+        n_out_GMIC=(GMIC < lV_GMIC_r | GMIC > uV_GMIC_r); %h=1 is for rejection
+        %p_out_GMIC = n_out_GMIC/L;
 
-    %prota gia GMIC
-    %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
-    %prokyptei apo tin methodo tyxaiopoiisis
-    GMIC_r = sort(GMIC_r); 
-    lowlim = round((a/2)*L);
-    uplim = round((1-a/2)*L);
-    lV_GMIC_r = GMIC_r(lowlim,:); %vector 
-    uV_GMIC_r = GMIC_r(uplim); %vector
-    %elenxo an to arxiko GMIC gia kathe ora einai ontos toy a/2 kai 1-a/2
-    %ton GMIC_r
-    for hours=1:24
-    out_GMIC(i) = (GMIC(i) < lV_GMIC_r(i) | GMIC(i) > uV_GMIC_r(i)); %
-    end
-    n_out_GMIC = len(find(out_GMIC))
-    p_out_GMIC = n_out_GMIC/24;
-    
-    % nomizw epistrefeis lathos value
-    %p_out_GMIC=n_out_GMIC/L
-    
-    %gia to MIC
-    %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
-    %prokyptei apo tin methodo tyxaiopoiisis
-    MIC_r = sort(MIC_r);
-    lV_MIC_r = MIC_r(lowlim,:);
-    uV_MIC_r = MIC_r(uplim);
-    %elenxo an to arxiko MIC gia kathe ora einai ontos toy a/2 kai 1-a/2
-    %ton MIC_r
-    n_out_MIC = length(find(MIC < lV_MIC_r | MIC > uV_MIC_r));
-    p_out_MIC = n_out_MIC/24;
+        %gia to MIC
+        %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
+        %prokyptei apo tin methodo tyxaiopoiisis
+        MIC_r = sort(MIC_r);
+        lV_MIC_r = MIC_r(lowlim,:);
+        uV_MIC_r = MIC_r(uplim,:);
+        %elenxo an to arxiko MIC gia kathe ora einai ontos toy a/2 kai 1-a/2
+        %ton MIC_r
+
+        n_out_MIC = MIC < lV_MIC_r | MIC > uV_MIC_r;
+        %p_out_MIC = n_out_MIC/L;
+        
+        %FIGURES
+        for i=1:24  
+            figure(i);
+            scatter(bikes(:,i),temperatures(:,i),'LineWidth',2);
+            title(sprintf("Scatter diagram for Hour: %d - %s",i,season));
+            xlabel("Rented Bike Count");
+            ylabel("Temperatures");
+            txt={sprintf("GMIC = %.4f  Hypothesis testing with randomization:h=%d",GMIC(i),n_out_GMIC(i)), ...
+                sprintf("MIC = %.4f     Hypothesis testing with randomization:h=%d",MIC(i),n_out_MIC(i))};
+            text(max(bikes(:,i))/2,median(temperatures(:,i))/3,txt,'Edgecolor','black','LineWidth',1);
+        end    
     
 end

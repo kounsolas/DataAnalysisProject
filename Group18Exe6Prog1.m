@@ -7,6 +7,7 @@ close all;
 
 %with readtable the data type is a cell
 data=readtable("SeoulBike.xlsx",'VariableNamingRule','preserve');
+
 %POS GINETAI NA EXOUN TOSO YPSILI KAI TOSO XAMILI THERMOKRASIA ???????????
 for i=1:24
     %ta dedomena briskontai ana sthles, kathe zeygari dyo sthlwn
@@ -17,7 +18,7 @@ for i=1:24
     %autumn_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==4 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
 end 
 % TI FASH TI GINETAI ME TO AUTUMN???
-[p_out_GMIC, p_out_MIC] = Group18Exe6Fun1(spring_bikes_temperature);
+[n_out_GMIC, n_out_MIC] = Group18Exe6Fun1(spring_bikes_temperature,"Spring");
 
 %apo tin stigmi pou to p>>a simainei oti mporoume na poume oti yparxei
 %simantiki statistiki diafora metaksi ton pragmatikon kai ton tyxaion timon
