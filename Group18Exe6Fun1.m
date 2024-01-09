@@ -62,7 +62,6 @@ function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
         %ton GMIC_r
 
         n_out_GMIC=(GMIC < lV_GMIC_r | GMIC > uV_GMIC_r); %h=1 is for rejection
-        %p_out_GMIC = n_out_GMIC/L;
 
         %gia to MIC
         %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
@@ -74,12 +73,11 @@ function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
         %ton MIC_r
 
         n_out_MIC = MIC < lV_MIC_r | MIC > uV_MIC_r;
-        %p_out_MIC = n_out_MIC/L;
         
         %FIGURES
         for i=1:24  
             figure(i);
-            scatter(bikes(:,i),temperatures(:,i),'LineWidth',2);
+            scatter(bikes(:,i),temperatures(:,i),'LineWidth',2); %diagramma diasporas
             title(sprintf("Scatter diagram for Hour: %d - %s",i,season));
             xlabel("Rented Bike Count");
             ylabel("Temperatures");
