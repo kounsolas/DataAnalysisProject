@@ -6,7 +6,7 @@ clear;
 close all;
 
 %with readtable the data type is a cell
-data=readtable("SeoulBike.xlsx",'VariableNamingRule','preserve');
+data=readtable("SeoulBike.xlsx",'VariableNamingRule','preserve');   
 
 %POS GINETAI NA EXOUN TOSO YPSILI KAI TOSO XAMILI THERMOKRASIA ???????????
 for i=1:24

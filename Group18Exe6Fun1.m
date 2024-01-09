@@ -31,7 +31,7 @@ function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
         for j = 1:L
             index = randperm(length(x)); %x,y have the same length
             %anakatema ton x kai y
-            x_r = x(index);
+            x_r = x;
             y_r = y(index);
             %ypologismos ton GMIC kai MIC me ta tyxaia deigmata
             mutI_r = MutualInformationXY(x_r,y_r);
@@ -53,7 +53,7 @@ function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
         %prota gia GMIC
         %brisko to a/2 kai 1-a/2 posistiaio simeio tis empeirikis katanomis poy
         %prokyptei apo tin methodo tyxaiopoiisis
-        GMIC_ro = sort(GMIC_r); 
+        GMIC_r = sort(GMIC_r); 
         lowlim = round((a/2)*L);
         uplim = round((1-a/2)*L);
         lV_GMIC_r = GMIC_r(lowlim,:); %vector 
