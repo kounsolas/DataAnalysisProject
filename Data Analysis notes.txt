@@ -38,6 +38,14 @@ R = corrcoef(A)                                     : Returns the matrix of corr
 
 x = norminv(p,mu,sigma)                             : Returns the inverse of the normal cdf with mean mu and standard deviation sigma, evaluated at the probability values in p.
 
+[b,bint,r,rint,stats] = regress(y,X)                : Returns a vector b of coefficient estimates for a multiple linear regression of the responses in vector y on the predictors in matrix X. 
+						      To compute coefficient estimates for a model with a constant term (intercept), include a column of ones in the matrix X.
+                                                      Returns a matrix bint of 95% confidence intervals for the coefficient estimates.
+						      Returns an additional vector r of residuals.
+						      Returns a matrix rint of intervals that can be used to diagnose outliers.
+
+
+
 
 
 
