@@ -1,5 +1,5 @@
-%vasiliki pleyridi
-%kounsolas xristos
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
 
 clc;
 clear;
@@ -33,3 +33,10 @@ Group18Exe1Fun1(winter_bikes,"Winter");
 Group18Exe1Fun1(spring_bikes,"Spring");
 Group18Exe1Fun1(summer_bikes,"Summer");
 Group18Exe1Fun1(autumn_bikes,"Autumn");
+
+%SXOLIA GIA TA APOTELESMATA 
+%Opws fainetai kai apo ta grafika kai oxi mono apotelesmata, h katanomh
+%Kernel einai ayth poy prosoeggizei kalytera ola ta dedomena mas metaksy twn
+%gnwstwn katanomwn.Gia ton xeimwna, exoyme arketa kalh proseggish h opoia
+%fainetai apo thn timh p kai epalhtheyetai kai apo to grafhma. Thn
+%xeiroterh exei to fthinwporo

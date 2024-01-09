@@ -1,3 +1,6 @@
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
+
 function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
     
     a =0.05;

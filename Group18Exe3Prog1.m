@@ -1,5 +1,5 @@
-%kounsolas xristos
-%vasiliki pleyridi
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
 
 clc;
 clear;
@@ -32,4 +32,14 @@ Group18Exe3Fun1(spring_bikes,"Spring");
 Group18Exe3Fun1(summer_bikes,"Summer");
 Group18Exe3Fun1(autumn_bikes,"Autumn");
 
-%spring-autumn sxedon idia
+%SXOLIA GIA TA APOTELESMATA
+%Oysiastika, oi pinakes poy prokyptoyn einai symmetrikoi me thn diagwnio na 
+% einai epishs axrhsth giati tha ypologizei thn diafora anamesa se ayto kai 
+% sto idio.Ara:(576-24)/2=276 zeygaria
+
+% H anoiksh kai to fthinwporo parathroyme oti odhgoyn se paraplhsia
+% apotelesmata
+
+%Genikh parathrhsh: wres poy einai konta sthn diagwnio ( dhladh kontines
+%wres metaksy toys) fainetai na exoyn epishs paraplhsies meses times
+%enoikiasewn podhlatwn

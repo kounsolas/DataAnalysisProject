@@ -1,5 +1,5 @@
-%vasiliki pleyridi
-%kounsolas xristos
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
 
 clc;
 clear;
@@ -39,4 +39,6 @@ result14=Group18Exe2Fun1(100,winter_bikes,autumn_bikes);
 result23=Group18Exe2Fun1(100,spring_bikes,summer_bikes);
 result24=Group18Exe2Fun1(100,spring_bikes,autumn_bikes);
 result34=Group18Exe2Fun1(100,summer_bikes,autumn_bikes);
+
+%SXOLIA GIA TA APOTELESMATA
 

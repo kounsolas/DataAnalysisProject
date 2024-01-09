@@ -1,5 +1,5 @@
-%kounsolas xristos
-%vasiliki pleyridi
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
 
 clc;
 clear;
