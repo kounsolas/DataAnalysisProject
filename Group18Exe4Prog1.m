@@ -22,6 +22,7 @@ while j<height(data)
 end 
 
 for i=1:24
+    hour(i,1)=sprintf("Hour %d",i);
     winter_bikes(:,i)=table2array(data(data.Seasons==1 & data.Hour==i-1,"Rented Bike Count"));
     spring_bikes(:,i)=table2array(data(data.Seasons==2 & data.Hour==i-1,"Rented Bike Count"));
     summer_bikes(:,i)=table2array(data(data.Seasons==3 & data.Hour==i-1,"Rented Bike Count"));
@@ -29,9 +30,15 @@ for i=1:24
 end
      
 
-p(1)=Group18Exe4Fun1(winter_bikes,spring_bikes,"Winter","Spring");
-p(2)=Group18Exe4Fun1(winter_bikes,summer_bikes,"Winter","Summer");
-p(3)=Group18Exe4Fun1(winter_bikes,autumn_bikes,"Winter","Autumn");
-p(4)=Group18Exe4Fun1(spring_bikes,summer_bikes,"Spring","Summer");
-p(5)=Group18Exe4Fun1(spring_bikes,autumn_bikes,"Spring","Autumn");
-p(6)=Group18Exe4Fun1(summer_bikes,autumn_bikes,"Summer","Autumn");
+p(1,:)=Group18Exe4Fun1(winter_bikes,spring_bikes,"Winter","Spring");
+p(2,:)=Group18Exe4Fun1(winter_bikes,summer_bikes,"Winter","Summer");
+p(3,:)=Group18Exe4Fun1(winter_bikes,autumn_bikes,"Winter","Autumn");
+p(4,:)=Group18Exe4Fun1(spring_bikes,summer_bikes,"Spring","Summer");
+p(5,:)=Group18Exe4Fun1(spring_bikes,autumn_bikes,"Spring","Autumn");
+p(6,:)=Group18Exe4Fun1(summer_bikes,autumn_bikes,"Summer","Autumn");
+
+row_names=["Winter-Spring","Winter-Summer","Winter-Autumn","Spring-Summer","Spring-Autumn","Summer-Autumn"];
+
+Group18Exe4Fun2(p,hour,row_names);
+
+%SXOLIA GIA APOTELESMATA
