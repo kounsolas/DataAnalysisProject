@@ -38,3 +38,34 @@ end
 
 %Colormaps
 Group18Exe5Fun2(r,relationship,direction,h);
+
+%SXOLIA GIA APOTELESMATA
+%Eginan 4 diaforetika colormaps gia kalyterh meleth twn apotelesmatwn
+
+%Sxoliasmos 1ou colormap:se ayton ton pinaka blepoume tis pragmatikes times
+%tou r se enan pinaka. pairnoume loipon mia genikh idea gia ayto poy tha
+%akolouthsei
+
+%Sxoliasmos 2ou colormap:se ayton ton pinaka ginetai diaxwrismos gia to
+%relationship se 4 kathgories ( ta oria gia kathe kathgoria paroysiazontai
+%analytika sthn synarthsh Group18Exe5Fun1.m). Opws blepoyme genika h sxesh
+%thermokrasias kai enoikiasmoy podhlatwn einai metria. Ton kalokairi den
+%yparxei idiaiterh sysxethsh (sxedon mhdaminh). Ayto bgazei nohma gt olh th
+%mera exei kales thermokrasies kai synama stamataei na einai paragontas.
+%Gewgrafika h seoul einai peripoy se idio gewgrafiko platos me thn
+%peloponnhso kai etsi kata meso oro oi thermokrasies kimainontai se
+%fysioloikes times. Tis ypoloipes epoxes blepoyme oti wres 7,8,9,10 h
+%thermokrasia pali den paizei rolo giati einai wres ypnoy kai etsi
+%genikoterhs xamhlhs kinhtikothtas sthn polh.Apo 13-18 exoume moderat gia
+%xeimwna kai fthinwporo enw thn anoiksh exoyme mia metafora wras pio pisw
+%(13-17). Ayto symbainei giati anhkoyn se diaforetika hliostasia (NOT
+%SURE??). 
+
+%Sxoliasmos 3ou colormap: genika yparxei thetikh association sxedon pantoy
+%to opoio bgazei nohma an skefteis oti me thn aykhsh the thermokrasias
+%yparxoyn perissoteres pithanothtes gia enoikiash podhlatwn. ekei poy einai
+%arnhtikh oysiastika den einai giati se aytes tis wres/epoxes exoyme
+%mhdenikh relationship
+
+%sxoliasmos 4ou colormap: gia tis perissoteres periptwseis h=0 ara apodoxh
+%kai ara ta apotelesmata mas einai ontws accurate
