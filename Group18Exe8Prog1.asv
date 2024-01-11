@@ -22,7 +22,6 @@ while j<height(data)
 end    
 
 for i=1:24
-    hour_array(i,1)=sprintf("Hour %d",i);
     %ta dedomena briskontai ana sthles, kathe zeygari dyo sthlwn
     %antistoixei se diaforetikh wra
     winter_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==1 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
@@ -46,6 +45,7 @@ end
 %prosdiorismou
 
 for hour=1:24
+    hour(i,1)=sprintf("Hour %d",i);
     h_winter_spring(hour) = Group18Exe8Fun2(adjR2_winter(hour),adjR2_spring(hour),winter_bikes_temperature(:,2*hour-1:2*hour),spring_bikes_temperature(:,2*hour-1:2*hour));
     h_winter_summer(hour) = Group18Exe8Fun2(adjR2_winter(hour),adjR2_summer(hour),winter_bikes_temperature(:,2*hour-1:2*hour),summer_bikes_temperature(:,2*hour-1:2*hour));
     h_winter_autumn(hour) = Group18Exe8Fun2(adjR2_winter(hour),adjR2_autumn(hour),winter_bikes_temperature(:,2*hour-1:2*hour),autumn_bikes_temperature(:,2*hour-1:2*hour));
@@ -55,7 +55,9 @@ for hour=1:24
 end
 
 h = [h_winter_spring;h_winter_summer;h_winter_autumn;h_spring_summer;h_spring_autumn;h_summer_autumn];
+
+results = array2table(h);
 row_names=["Winter-Spring","Winter-Summer","Winter-Autumn","Spring-Summer","Spring-Autumn","Summer-Autumn"];
-
-Group18Exe8Fun3(hour_array,h,row_names);
-
+results.Properties.RowNames = row_names;
+results.Properties.V
+disp(results)
