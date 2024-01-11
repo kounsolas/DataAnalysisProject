@@ -1,6 +1,6 @@
 %Kounsolas Xristos
 %Plevridi Vasiliki Varvara
-
+warning off all
 clc;
 clear;
 close all;
@@ -18,7 +18,6 @@ while j<height(data)
     else 
         j=j+24;
     end
-   
 end    
 
 for i=1:24

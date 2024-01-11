@@ -1,4 +1,5 @@
 function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
+    warning off all
     %thelo na bro tin eksartisi ton podilaton apo tin thermmokrasia
     %ara thermokrasia = x
     % podilata = y
@@ -63,6 +64,7 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
      option_x=x_names(row_x);
      option_y=y_names(col_y);
     
+    %{
     %paroysiash grafika
     %isws na mhn einai aparaithth. Na thn svhsoyme?
     figure();
@@ -73,5 +75,5 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
     hold on;
     plot(x_options(:,row_x),yhatmax)%FIX THAT 
     hold off;
-
+%}
 end

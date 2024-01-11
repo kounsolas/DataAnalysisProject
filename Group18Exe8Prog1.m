@@ -1,6 +1,6 @@
 %Kounsolas Xristos
 %Plevridi Vasiliki Varvara
-
+warning off all
 clc;
 clear;
 close all;
@@ -29,17 +29,3 @@ for i=1:24
     summer_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==3 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
     autumn_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==4 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
 end 
-
-
-for i=1:24
-    [adjr2(i,1),transform_x(i,1),transform_y(i,1)]=Group18Exe7Fun1(winter_bikes_temperature(:,2*i-1:2*i));
-    %gia i=3 exoume problima
-    hour(i,1)=sprintf("Hour %d",i);
-end    
-
-%DHMIOYRGIA TELIKOY PINAKA
-results=array2table(adjr2);
-s = strcat(transform_y, " =  a  +  b  * ", transform_x); %gia na dhmioyrgei strings 1x24
-results.Equation=s;
-results.Properties.RowNames = hour; % prosthiki onomatwn gia rows
-disp(results)

@@ -1,4 +1,5 @@
 function Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour)
+warning off all
 %DHMIOYRGIA TELIKOY PINAKA
 results=array2table(adjr2);
 transform_x_string = strcat("x'=",transform_x); %gia na dhmioyrgei strings 1x24
