@@ -32,14 +32,31 @@ end
 
 
 for i=1:24
-    [adjr2(i,1),transform_x(i,1),transform_y(i,1)]=Group18Exe7Fun1(winter_bikes_temperature(:,2*i-1:2*i));
-    %gia i=8 exoume problima
+    [adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(winter_bikes_temperature(:,2*i-1:2*i));
     hour(i,1)=sprintf("Hour %d",i);
 end    
-
 %DHMIOYRGIA TELIKOY PINAKA
-results=array2table(adjr2);
-s = strcat(transform_y, " =  a  +  b  * ", transform_x); %gia na dhmioyrgei strings 1x24
-results.Equation=s;
-results.Properties.RowNames = hour; % prosthiki onomatwn gia rows
-disp(results)
+Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour);
+
+%SXOLIA GIA APOTELESMATA
+
+%Oysiastikika phra y=a+bx kai ekana diaforous transformations kai gia to y
+%kai gia to x kai oloys toys pithanous syndiasmous. Epishs ekana gia k=1:5
+%px an k=2 y'=y kai x'=e(0.1x) tha einai to equation
+%y=a+be(0.1x)+c(e(0.1x))^2
+
+%Gia kapoia hours oti equation kai na bazw h timh toy adjr2 paramenei
+%parapoly mikrh. Ayto nomizw exei na kanei me to correlation. Sthn askhsh 5
+%px parathrhsame gia ton xeimwna oti tis wres 7 8 9 h sysxetish einai para poly mikrh.
+%Logiko loipon einai ta shmeia toy scatter diagram na einai katanemhmena
+%einai wste na mhn mporoyn na proseggistoyn apo mia synarthsh eykola(
+%toylaxiston tetoias klimakas)
+
+%kati allo gia problhmatismo: gia k>2 h synarthseis poy prokyptoyn den
+%einai 1-1. ayto omws einai aparaithta lathos? Ean epistrefame se scatter
+%diagram metasxhmatizontas pros ta pisw, nomizw mathimatika tha gyrnoysame
+%se 1-1 kampylh (not sure)
+
+%h diafora genika gia diaforetika k einai poly mikrh. nomizw oti h aykshsh
+%ths polyplokothtas en telei den prosferei kati kai isws tha eprepe na
+%epistrepsoyme sta pio apla montela
