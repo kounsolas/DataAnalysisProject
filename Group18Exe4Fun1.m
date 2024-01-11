@@ -9,9 +9,9 @@ function h_b=Group18Exe4Fun1(bikes1,bikes2,season1,season2)
     ci_vector_low=floor((N+1)*alpha/2); %floor: gia akeraio meros
     ci_vector_high=N+1-ci_vector_low; %theseis twn oriwn se pinaka me aykousa seira
 
-    figure();
-    legend('show');
-    title(sprintf("Bootstrap conficence interval\n%s - %s",season1,season2));
+    %figure();
+    %legend('show');
+    %title(sprintf("Bootstrap conficence interval\n%s - %s",season1,season2));
     %colours=colormap(lines(6));
     %sxhmata=["-","--",":","-."];
     k=1;
@@ -32,8 +32,8 @@ function h_b=Group18Exe4Fun1(bikes1,bikes2,season1,season2)
         if mod(i,4)==0
             l=l+1;
         end    
-        xline(ci_b_low(i),sxhmata(k),"DisplayName",sprintf("Low limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
-        xline(ci_b_high(i),sxhmata(k),"DisplayName",sprintf("High limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
+        %xline(ci_b_low(i),sxhmata(k),"DisplayName",sprintf("Low limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
+        %xline(ci_b_high(i),sxhmata(k),"DisplayName",sprintf("High limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
     end
     %legend('Location', 'northeastoutside');
     %xline(0,"Color","black",'LineWidth',4);

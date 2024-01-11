@@ -58,7 +58,7 @@ Group18Exe5Fun2(r,relationship,direction,h);
 %thermokrasia pali den paizei rolo giati einai wres ypnoy kai etsi
 %genikoterhs xamhlhs kinhtikothtas sthn polh.Apo 13-18 exoume metria syxetisi gia
 %xeimwna kai fthinwporo enw thn anoiksh exoyme mia metafora wras pio pisw
-%(13-17). Ayto symbainei giati anhkoyn se diaforetika hliostasia. 
+%(13-17). 
 
 %Sxoliasmos 3ou colormap: genika yparxei thetikh association sxedon pantoy
 %to opoio bgazei nohma an skefteis oti me thn aykhsh the thermokrasias

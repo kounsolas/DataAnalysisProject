@@ -42,3 +42,10 @@ row_names=["Winter-Spring","Winter-Summer","Winter-Autumn","Spring-Summer","Spri
 Group18Exe4Fun2(p,hour,row_names);
 
 %SXOLIA GIA APOTELESMATA
+%Ta apotelesmata poy prokyptoyn einai ta ekshs:
+%winter-Spring:yparxei aisthth diafora enoiikiashs podhlatwn gia oles tis
+%wres ths hmeras. To idio isxyei kai gia ta zeygaria: winter-summer kai
+%winter-autumn. To zeygari spring- summer parathroyme oti apo tis 12 to
+%meshmeri mexri tis 6 to apogeyma oi enoikiaseis podhlatwn einai
+%paraplhsies. Gia to zeygari spring-autumn: thn wra 8 kai tis wres 1 me 11
+%to brady, kai telos summer-autumn: 8 me 1 to prwi kai 4 me 7 to apogeyma.
