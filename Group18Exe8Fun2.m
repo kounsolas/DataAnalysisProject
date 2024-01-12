@@ -1,3 +1,6 @@
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
+
 %painro san orisma ta dianysma adjR2_s1,adjR2_s2 
 % poy periexoun to adjR2 gia MIA ORA tis epoxis 
 %kai ta bikes_temperatures_s1/2 poy periexoun ta bikes

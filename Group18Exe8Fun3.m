@@ -6,4 +6,5 @@ function[] = Group18Exe8Fun3(hour_array,h,row_names)
     results.Properties.RowNames = row_names;
     results.Properties.VariableNames = hour_array;
     disp(results)
+    fprintf("\n")
 end

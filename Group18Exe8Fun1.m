@@ -1,3 +1,6 @@
+%Kounsolas Xristos
+%Plevridi Vasiliki Varvara
+
 %pairnei san orisma ta bikes,temperature GIA MIA ora
 function [adjR2] = Group18Exe8Fun1(bikes_temperature_hour)
     %ypologisei ton synetlesti prodsiorismou gia metaksi bikes
