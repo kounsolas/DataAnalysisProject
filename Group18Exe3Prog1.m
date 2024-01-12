@@ -40,6 +40,6 @@ Group18Exe3Fun1(autumn_bikes,"Autumn");
 % H anoiksh kai to fthinwporo parathroyme oti odhgoyn se paraplhsia
 % apotelesmata
 
-%Genikh parathrhsh: wres poy einai konta sthn diagwnio ( dhladh kontines
+%Genikh parathrhsh: wres poy einai konta sthn diagwnio (dhladh kontines
 %wres metaksy toys) fainetai na exoyn epishs paraplhsies meses times
-%enoikiasewn podhlatwn
+%enoikiasewn podhlatwn 
