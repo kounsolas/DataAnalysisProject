@@ -12,7 +12,7 @@ function Group18Exe1Fun1(table_bikes,season)
                 %pd is a cell
                 pd{i} = fitdist(table_bikes, distributions{i});
                 %Eyresh timhs statistikou elegxoy X2 gia kathe katanomh
-                [~, p(i)] = chi2gof(table_bikes, 'CDF',pd{i});
+                [h(i), p(i)] = chi2gof(table_bikes, 'CDF',pd{i});
             catch
          %if error, continue with the next distribution
                 fprintf("\n(Error with %s)",distributions{i})

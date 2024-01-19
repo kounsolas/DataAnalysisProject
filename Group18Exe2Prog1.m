@@ -25,7 +25,7 @@ end
 %NOT SURE JUST A TRY 
 %o feboyarios exei 28 meres. Ara gia na exoyn oloi oi antistoixoi mhnes  to idio tha prepei na
 %sbhsw tis hmeromhnies 29,30, 31 (opoy yparxei) toy mhna may ayg kai nov
-dateObjects = datetime(data.Date, 'InputFormat', 'dd-mmm-yyyy'); %format to matlab gia na exw metaprosbash sto date ksexwrista
+% dateObjects = datetime(data.Date, 'InputFormat', 'dd-mmm-yyyy'); %format to matlab gia na exw metaprosbash sto date ksexwrista
 
 %ayto isxyei gia olous tous mhnes
  % for j=1:31
