@@ -49,7 +49,8 @@ Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour);
 %px parathrhsame gia ton xeimwna oti tis wres 7 8 9 h sysxetish einai para poly mikrh.
 %Logiko loipon einai ta shmeia toy scatter diagram na einai katanemhmena
 %einai wste na mhn mporoyn na proseggistoyn apo mia synarthsh eykola(
-%toylaxiston tetoias klimakas)
+%toylaxiston tetoias klimakas). To idio prokyptei kai apo ta apotelesmata
+%MIC kai GMIC ths askhshs 6
 
 %kati allo gia problhmatismo: gia k>2 h synarthseis poy prokyptoyn den
 %einai 1-1. ayto omws einai aparaithta lathos? Ean epistrefame se scatter

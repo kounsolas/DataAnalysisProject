@@ -9,40 +9,30 @@ function h_b=Group18Exe4Fun1(bikes1,bikes2,season1,season2)
     ci_vector_low=floor((N+1)*alpha/2); %floor: gia akeraio meros
     ci_vector_high=N+1-ci_vector_low; %theseis twn oriwn se pinaka me aykousa seira
 
-    %figure();
-    %legend('show');
-    %title(sprintf("Bootstrap conficence interval\n%s - %s",season1,season2));
-    %colours=colormap(lines(6));
-    %sxhmata=["-","--",":","-."];
-    k=1;
-    l=1;
+    x = 0:23;
+    figure;
+    hold on;
     for i = 1:24
         ci_b_low(i) = bootstrap_statistic(ci_vector_low, i);
         ci_b_high(i) = bootstrap_statistic(ci_vector_high, i);
-    
+
+        line([x(i), x(i)], [ci_b_low(i), ci_b_high(i)], 'Color',"k" , 'LineWidth', 2);
+
         if (ci_b_low(i) <= 0 && ci_b_high(i) >= 0) % sthn periptwsh mas theloume to mhden na anhkei sto d.e.
             h_b(i)=0; %dekth
+            color = 'g';
         else 
             h_b(i)=1; %απορριψη
+            color = 'r';
         end
-
-        if mod(i,6)==0 %gia na allazei to sxhma
-            k=k+1;
-        end  
-        if mod(i,4)==0
-            l=l+1;
-        end    
-        %xline(ci_b_low(i),sxhmata(k),"DisplayName",sprintf("Low limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
-        %xline(ci_b_high(i),sxhmata(k),"DisplayName",sprintf("High limit for hour %d",i),"LineWidth",2,"Color",colours(l,:));
+    scatter(x(i), 0, 50, color, 'filled');
     end
-    %legend('Location', 'northeastoutside');
-    %xline(0,"Color","black",'LineWidth',4);
-    % histogram(ci_b_low);
-    % hold on;
-    % histogram(ci_b_high);
-    % xline(0,'r',"LineWidth",2);
-    % legend("Histogram of Low limit","Histogram of High limit");
-    % title(sprintf("Bootstrap conficence interval\n%s - %s",season1,season2));
-    % fprintf("statistiko gia to an yparxei diafora: %.2f%%\n",pososto_bootstrat);
+    
+    xticks(1:24);
+    xtickangle(0);
+    xlabel ("Hours");
+    ylabel("Bootstrap conficence interval");
+    title(sprintf("%s vs %s",season1,season2));
+    hold off;
 end
 

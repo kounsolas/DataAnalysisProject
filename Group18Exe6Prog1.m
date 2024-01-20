@@ -30,10 +30,16 @@ for i=1:24
     autumn_bikes_temperature(:,2*i-1:2*i)=table2array(data(data.Seasons==4 & data.Hour==i-1,["Rented Bike Count","Temperature(°C)"]));
 end 
 
-[n_out_GMIC, n_out_MIC] = Group18Exe6Fun1(spring_bikes_temperature,"Spring");
+Group18Exe6Fun1(winter_bikes_temperature,"Winter");
+Group18Exe6Fun1(spring_bikes_temperature,"Spring");
+Group18Exe6Fun1(summer_bikes_temperature,"Summer");
+Group18Exe6Fun1(autumn_bikes_temperature,"Autumn");
 
-%apo tin stigmi pou to p>>a simainei oti mporoume na poume oti yparxei
-%simantiki statistiki diafora metaksi ton pragmatikon kai ton tyxaion timon
-%ypostirizontas etsi tin simantikotita ton GMIC kai MIC
+%Opws fainetai kai sthn ekfwnhsh, einai logiko oi syntelestes MIC kai GMIC
+%na mhn einai idioi sthn periptwsh poy den exoyme grammikes sysxethseis
+%katws to GMIC anixneyei mono aytes. Genika blepoume oti oi times twn GMIC
+%kai MIC kymainontai se poly mikra noymera.
+
+ 
 
 

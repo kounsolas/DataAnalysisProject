@@ -1,17 +1,10 @@
 %Kounsolas Xristos
 %Plevridi Vasiliki Varvara
 
-function[n_out_GMIC,n_out_MIC] = Group18Exe6Fun1(bikes_temperature,season)
+function Group18Exe6Fun1(bikes_temperature,season)
     
     a =0.05;
     L=1000;
-    %calculate MIC-GMIC for every hour
-    %MIC = NaN*ones(24,1);
-    %GMIC = NaN*ones(24,1);
-
-    %initialize GMIC and MIC for randomize method
-    %MIC_r = NaN*ones(L,24);
-    %GMIC_r = NaN*ones(L,24);
 
     bikes = bikes_temperature(:,1:2:end);
     temperatures = bikes_temperature(:,2:2:end);
