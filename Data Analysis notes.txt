@@ -58,6 +58,78 @@ Bootstrap :
   Σε αυτήν την περίπτωση δεν υπάρχει λόγος να προτιµηθεί το bootstrap δ.ε. Σε περιπτώσεις όµως που οι υποθέσεις για τη χρήση του παραµετρικού δ.ε. δεν ικανοποιούνται, 
   το bootstrap δ.ε. αποτελεί τη µέθοδο που ϑα πρέπει να προτιµηθεί.
 
+Μειωση Διαστασης:
+
+PCA PRINCIPAL COMPONENT ANALYSIS(ΜΕΘΟΔΟΣ ΚΥΡΙΩΝ ΣΥΝΙΣΤΩΣΩΝ)
+Principal Component Analysis (PCA) is a dimensionality reduction technique commonly used in data analysis and machine learning. The goal of PCA is to transform the original variables into a new set of uncorrelated variables, called principal components, that capture the maximum variance in the data. Here's a step-by-step explanation of the PCA method:
+
+Data Centering:
+Subtract the mean of each variable from the corresponding variable. This is done to center the data around the origin.
+
+Covariance Matrix:
+Compute the covariance matrix of the centered data. The covariance matrix describes how each variable changes with respect to the others.
+
+Eigendecomposition:
+Find the eigenvectors and eigenvalues of the covariance matrix.
+Eigenvectors represent the directions of maximum variance in the data.
+Eigenvalues represent the magnitude of variance in the corresponding eigenvector direction.
+
+Sorting Eigenvectors:
+Sort the eigenvectors in descending order based on their corresponding eigenvalues. This is because the eigenvector with the highest eigenvalue corresponds to the direction of maximum variance.
+
+Projection:
+Project the original data onto the selected eigenvectors to obtain the principal components.
+The first few principal components capture the most significant variance in the data.
+
+Scree Plot:
+Plot the eigenvalues in descending order to create a scree plot. The scree plot helps visualize the amount of variance explained by each principal component.
+
+Dimensionality Reduction:
+Retain a subset of the principal components based on the scree plot or a predefined threshold for variance explained.
+Discard the less significant principal components.
+
+Data Reconstruction:
+Optionally, reconstruct the original data from the retained principal components. This step is useful if you want to project the data back into the original feature space.
+PCA is widely used for various purposes, including data visualization, noise reduction, and feature extraction. It is particularly useful when dealing with high-dimensional data or when trying to identify patterns and reduce redundancy in the data.
+
+
+ΙCA (INDEPENTENT COMPONENT ANALYSIS)
+Independent Component Analysis (ICA) is a computational technique used in signal processing and data analysis to separate a multivariate signal into additive, independent components. The key idea is to find a linear transformation of the observed data such that the resulting components are statistically independent. ICA is particularly powerful when applied to mixtures of signals where the goal is to recover the original, independent sources.
+
+PCA VS ICA
+Independent Component Analysis (ICA) and Principal Component Analysis (PCA) are both linear transformation techniques, but they have distinct objectives and operate on different principles. Here are the key differences and some similarities between ICA and PCA:
+
+Differences:
+
+Objective:
+ICA: The main goal of ICA is to find a linear transformation (demixing matrix) such that the resulting components are statistically independent. It is used for blind source separation, assuming that the sources are non-Gaussian.
+PCA: PCA seeks to find the principal components that capture the maximum variance in the data. The principal components are orthogonal, and the first principal component explains the most variance, followed by subsequent components.
+
+Statistical Assumptions:
+ICA: Assumes that the source signals are statistically independent and non-Gaussian.
+PCA: Assumes that the principal components are orthogonal, and it does not make assumptions about the statistical independence of variables.
+
+Source Separation vs. Variance Capture:
+ICA: Designed for separating mixed signals into their original independent sources, making it useful in scenarios like blind signal separation.
+PCA: Primarily used for reducing dimensionality while retaining as much variance as possible. It does not explicitly aim to separate independent sources.
+
+Solution Uniqueness:
+ICA: The solution is not unique due to the scaling and permutation ambiguity of the independent components.
+PCA: The principal components are unique and ordered in terms of the amount of variance they capture.
+
+Similarities:
+
+Linear Transformations:
+Both ICA and PCA involve linear transformations of the original data.
+
+Dimensionality Reduction:
+Both techniques can be used for dimensionality reduction, albeit with different goals. PCA achieves reduction by capturing maximum variance, while ICA achieves it by separating independent sources.
+
+Orthogonality:
+While the goals are different, both methods involve finding orthogonal transformations. In PCA, the principal components are orthogonal, and in ICA, the demixing matrix attempts to create statistically independent components.
+
+In summary, while both ICA and PCA involve linear transformations, their objectives and underlying assumptions are distinct. ICA focuses on separating independent sources, assuming non-Gaussianity, while PCA aims to capture the maximum variance in the data through orthogonal principal components.
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ΕΡΩΤΟΑΠΑΝΤΗΣΕΙΣ
