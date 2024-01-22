@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 %painro san orisma ta dianysma adjR2_s1,adjR2_s2 
 % poy periexoun to adjR2 gia MIA ORA tis epoxis 

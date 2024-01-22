@@ -1,3 +1,6 @@
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
+
 function Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour)
 warning off all
 %DHMIOYRGIA TELIKOY PINAKA

@@ -13,7 +13,7 @@ plot(Y_2a);
 hold on;
 plot(Y_2b);
 legend("Y original","Y_1a:for every hour regression","Y_1b: for every hour stepwise regression", ...
-    "Y_2a:for all hours together regression","Y_2b:for all hours together stepwise regression");
+    "Y_2a:for all hours together regression","Y_2b:for all hours together stepwise regression","Location","best");
 title(sprintf("For season %s",season))
 
 fprintf("For season: %s\n",season)

@@ -1,3 +1,6 @@
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
+
 function h_b=Group18Exe4Fun1(bikes1,bikes2,season1,season2) 
     %Bootstrap
     N=1000;

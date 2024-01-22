@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 warning off all
 clc;
 clear;
@@ -51,11 +51,6 @@ Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour);
 %einai wste na mhn mporoyn na proseggistoyn apo mia synarthsh eykola(
 %toylaxiston tetoias klimakas). To idio prokyptei kai apo ta apotelesmata
 %MIC kai GMIC ths askhshs 6
-
-%kati allo gia problhmatismo: gia k>2 h synarthseis poy prokyptoyn den
-%einai 1-1. ayto omws einai aparaithta lathos? Ean epistrefame se scatter
-%diagram metasxhmatizontas pros ta pisw, nomizw mathimatika tha gyrnoysame
-%se 1-1 kampylh (not sure)
 
 %h diafora genika gia diaforetika k einai poly mikrh. nomizw oti h aykshsh
 %ths polyplokothtas en telei den prosferei kati kai isws tha eprepe na

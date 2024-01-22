@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 function Group18Exe3Fun1(bikes_hour,season)
 for i=1:24

@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 %theloume na diereynisoume an to grammiko montelo tis enoikiasis 
 %podilaton  apo ti thermokrasia gia mia sygkekrimeni ora tis imeras

@@ -1,3 +1,6 @@
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
+
 function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
     warning off all
     %thelo na bro tin eksartisi ton podilaton apo tin thermmokrasia
@@ -64,7 +67,6 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
      option_x=x_names(row_x);
      option_y=y_names(col_y);
     
-    %{
     %paroysiash grafika
     %isws na mhn einai aparaithth. Na thn svhsoyme?
     figure();
@@ -73,7 +75,8 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour)
     ylabel("Rented Bike Count");
     title("Scatter diagram with trnasformed x,y");
     hold on;
-    plot(x_options(:,row_x),yhatmax)%FIX THAT 
+    [x_sorted,idx]=sort(x_options(:,row_x));
+    y_sorted=yhatmax(idx);
+    plot(x_sorted,y_sorted,"LineWidth",1.5);
     hold off;
-%}
 end

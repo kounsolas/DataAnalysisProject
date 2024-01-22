@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 %pairnei san orisma ta bikes,temperature GIA MIA ora
 function [adjR2] = Group18Exe8Fun1(bikes_temperature_hour)
