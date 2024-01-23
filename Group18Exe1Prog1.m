@@ -1,5 +1,6 @@
 %Kounsolas Xristos ΑΕΜ:10345
 %Plevridi Vasiliki Varvara ΑΕΜ:10454
+
 clc;
 clear;
 close all;
@@ -39,3 +40,10 @@ Group18Exe1Fun1(autumn_bikes,"Autumn");
 %gnwstwn katanomwn.Gia ton xeimwna, exoyme arketa kalh proseggish h opoia
 %fainetai apo thn timh p kai epalhtheyetai kai apo to grafhma. Thn
 %xeiroterh exei to fthinwporo
+
+%Exei dhmioyrghthei ena arxeio distributions.dat to opoio emperiexetai sta arxeia poy
+%anebhkan kai oysiastika exei ola ta onomata twn diathesimwn katanomwn poy
+%mporei na xrhsimopoieisei h fidtist. epilexthke na ginei etsi gia na mhn
+%yparxei enas megalos pinakas eswterika ths synarthshs. Parola ayta, se
+%periptwsh poy den epithymeitai kati tetoio, o antistoixos pinakas yparxei
+%ws sxolio sthn synarthsh Group18Exe1Fun1

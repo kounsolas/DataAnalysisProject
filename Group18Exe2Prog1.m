@@ -1,5 +1,5 @@
-%Kounsolas Xristos
-%Plevridi Vasiliki Varvara
+%Kounsolas Xristos ΑΕΜ:10345
+%Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 clc;
 clear;
@@ -21,34 +21,6 @@ while j<height(data)
    
 end 
 
-
-%NOT SURE JUST A TRY 
-%o feboyarios exei 28 meres. Ara gia na exoyn oloi oi antistoixoi mhnes  to idio tha prepei na
-%sbhsw tis hmeromhnies 29,30, 31 (opoy yparxei) toy mhna may ayg kai nov
-% dateObjects = datetime(data.Date, 'InputFormat', 'dd-mmm-yyyy'); %format to matlab gia na exw metaprosbash sto date ksexwrista
-
-%ayto isxyei gia olous tous mhnes
- % for j=1:31
- %     %gia mhnes 12 3 6 9
- %     if sum((day(dateObjects)==j & ismember(month(dateObjects),[12 3 6 9])))~=4*24
- %         todelete=day(dateObjects)==j & ismember(month(dateObjects),[12 3 6 9]);
- %         data(todelete,:)=[];
- %         dateObjects(todelete)=[];
- %     end    
- %     %gia mhnes 1 4 7 10    
- %     if sum((day(dateObjects)==j & ismember(month(dateObjects),[1 4 7 10])))~=4*24
- %         todelete=day(dateObjects)==j & ismember(month(dateObjects),[1 4 7 10]);
- %         data(todelete,:)=[];
- %         dateObjects(todelete)=[]; 
- %     end    
- %     %gia mhnes 2 5 8 11    
- %     if sum((day(dateObjects)==j & ismember(month(dateObjects),[2 5 8 11])))~=4*24
- %         todelete=day(dateObjects)==j & ismember(month(dateObjects),[2 5 8 11]);
- %         data(todelete,:)=[];
- %         dateObjects(todelete)=[];     
- %     end   
- %  end 
-
 % to have access in a column of a cell use : 
 % name_of_cell(:,"name_of_column")
 winter_bikes=table2array(data(data.Seasons==1,"Rented Bike Count"));
@@ -61,24 +33,46 @@ autumn_bikes=table2array(data(data.Seasons==4,"Rented Bike Count"));
 %summer = 3
 %autumn = 4
 
-result12=Group18Exe2Fun1(100,winter_bikes,spring_bikes);
-result13=Group18Exe2Fun1(100,winter_bikes,summer_bikes);
-result14=Group18Exe2Fun1(100,winter_bikes,autumn_bikes);
-result23=Group18Exe2Fun1(100,spring_bikes,summer_bikes);
-result24=Group18Exe2Fun1(100,spring_bikes,autumn_bikes);
-result34=Group18Exe2Fun1(100,summer_bikes,autumn_bikes);
+result=zeros(4,4);
+seasons=["Winter:1","Spring:2","Summer:3","Autumn:4"];
 
-%SXOLIA GIA TIS PITHANES ALLAGES
-%Nomizw oti oso pio megalo to M toso pio accurate to apotelesma. Me thn
-%allagh omws apo ta 100 sta 1000 blepw mia terastia diafora posostoy kai oso 
-%aykasw to M teinei na plhsiasei to 100% ARA TI FASH????
-%Sxetika me ta deigmata: dokimasa me kai xwris thn afairesh twn antistoixwn
-%hmerwmhniwn poy leipoyn profanws to deigma einai toso megalo (apo to opoio
-%epilegontai oi times) poy den ephreazei toso h yparksh toys h oxi
-%(odhgoymaste se idia pososta)
-% Pragmatika den odhgoyme se kapoio symperasma apo ta parapanw...POY EINAI
-% TO LATHOS OEO? TOYLAXISTON BEBAIA TWRA DEN BGAZEI MONIMWS MHDENIKA!
-%kai sxetika me ta vectors, emena moy bgazei logikh na pairneis apo to idio
-%shmeio antistoixo ths katanomhs gia thn kathe peripwtsh alliws pws mporeis
-%na ta sygkrineis? alla nomizw kai tyxaia na baleis gia to kathena apo thn
-%stigmh poy xrhsimopoioyme pleon to histcounts den xreiazetai aparaithta
+result(1,2)=Group18Exe2Fun1(100,winter_bikes,spring_bikes);
+result(1,3)=Group18Exe2Fun1(100,winter_bikes,summer_bikes);
+result(1,4)=Group18Exe2Fun1(100,winter_bikes,autumn_bikes);
+result(2,3)=Group18Exe2Fun1(100,spring_bikes,summer_bikes);
+result(2,4)=Group18Exe2Fun1(100,spring_bikes,autumn_bikes);
+result(3,4)=Group18Exe2Fun1(100,summer_bikes,autumn_bikes);
+
+result = triu(result) + triu(result, 1)';
+%apla kanw symmetriko ton pinaka
+%bazw thn idia timh sto stoixeio 1,2 kai sto 2,1
+
+result=array2table(result);
+result.Properties.RowNames =seasons;
+result.Properties.VariableNames=seasons;
+disp(result);
+
+%SXOLIA GIA APOTELESMATA
+%Ta apotelesmata gia deigma apo kathe epoxh mhkoys 100 den einai ayta poy
+%tha perimename akribws. Gegonos poy einai apolyta logiko an skeftoyme to
+%mhkos toy arxikoy sample.den mporoume me toso mikro deigma na bgaloyme
+%symperasmata. H anakribeia twn apotelesmatwn fainetai poly entona apo tis
+%sygkriseis me xeimwna kai gia ypoloipes epoxes.Blepoyme oti to pososto
+%omoiothtas twn katanomwn twn 2 epoxwn px xeimwna kai anoikshs einai idio
+%me ayto anoikshs kai kalokairioy. An symboleytoyme kai thn askhsh 1,
+%blepoyme oti o xeimwnas eidika katanemetai poly diaforetika ston aksona x
+%Gia na odhghthoume se poly pio real apotelesmata, dokimasame na allaksoyme
+%to mhkos toy sample poy tha sygkrithei sta 500 (anti gia 100) kai me edges
+%50 odhghthkame sta parakatw apotelesmata:
+
+%             Winter:1    Spring:2    Summer:3    Autumn:4
+%             ________    ________    ________    ________
+% 
+% Winter:1        0          14           1           2   
+% Spring:2       14           0          69          40   
+% Summer:3        1          69           0          63   
+% Autumn:4        2          40          63           0  
+
+% Poly pio logika apotelesmata (3-1 logiko na exoyn mhdaminh omoiothta kai
+% 3-2,4-2 arketa megalh) 
+

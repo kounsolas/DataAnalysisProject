@@ -1,5 +1,6 @@
 %Kounsolas Xristos ΑΕΜ:10345
 %Plevridi Vasiliki Varvara ΑΕΜ:10454
+
 warning off all
 clc;
 clear;
@@ -31,7 +32,10 @@ end
 
 
 for i=1:24
-    [adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(winter_bikes_temperature(:,2*i-1:2*i));
+    %[adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(winter_bikes_temperature(:,2*i-1:2*i),i-1);
+    [adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(spring_bikes_temperature(:,2*i-1:2*i),i-1);
+    %[adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(summer_bikes_temperature(:,2*i-1:2*i),i-1);
+    %[adjr2(i,1),transform_x(i,1),transform_y(i,1),k_final(i,1)]=Group18Exe7Fun1(autumn_bikes_temperature(:,2*i-1:2*i),i-1);
     hour(i,1)=sprintf("Hour %d",i);
 end    
 %DHMIOYRGIA TELIKOY PINAKA
@@ -55,3 +59,6 @@ Group18Exe7Fun2(adjr2,transform_x,transform_y,k_final,hour);
 %h diafora genika gia diaforetika k einai poly mikrh. nomizw oti h aykshsh
 %ths polyplokothtas en telei den prosferei kati kai isws tha eprepe na
 %epistrepsoyme sta pio apla montela
+
+%gia na mhn einai terastio xronika to programma h kathe epoxh testarete
+%ksexwrista kai xeirokinhta

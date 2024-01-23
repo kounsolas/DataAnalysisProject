@@ -3,7 +3,8 @@
 
 function Group18Exe1Fun1(table_bikes,season)
     %importdata() returns a cell type
-    distributions=importdata("distributions.dat");
+    %distributions=importdata("distributions.dat");
+    distributions = {'Beta', 'Binomial', 'BirnbaumSaunders', 'Burr', 'Exponential', 'Extreme Value', 'Gamma', 'Generalized Extreme Value', 'Generalized Pareto', 'Half Normal', 'InverseGaussian', 'Kernel', 'Logistic', 'Loglogistic', 'Lognormal', 'Nakagami', 'Negative Binomial', 'Normal', 'Poisson', 'Rayleigh', 'Rician', 'Stable', 'tLocationScale', 'Weibull'};
     warning off all;
    
     for i=1:length(distributions)
@@ -23,6 +24,6 @@ function Group18Exe1Fun1(table_bikes,season)
     fprintf("\n--------------------------\n%s:%s με p=%f\n---------------------------\n",season,distributions{index},maxValue);
     
     figure();
-    histfit(table_bikes,20,distributions{index});
+    histfit(table_bikes,20,distributions{index});%edw mporei na allaksoyn ta edges
     title(sprintf("Histogram- %s- %s",distributions{index},season));
 end
