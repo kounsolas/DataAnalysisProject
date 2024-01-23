@@ -2,8 +2,6 @@
 %Plevridi Vasiliki Varvara ΑΕΜ:10454
 
 function Group18Exe1Fun1(table_bikes,season)
-    %importdata() returns a cell type
-    %distributions=importdata("distributions.dat");
     distributions = {'Beta', 'Binomial', 'BirnbaumSaunders', 'Burr', 'Exponential', 'Extreme Value', 'Gamma', 'Generalized Extreme Value', 'Generalized Pareto', 'Half Normal', 'InverseGaussian', 'Kernel', 'Logistic', 'Loglogistic', 'Lognormal', 'Nakagami', 'Negative Binomial', 'Normal', 'Poisson', 'Rayleigh', 'Rician', 'Stable', 'tLocationScale', 'Weibull'};
     warning off all;
    

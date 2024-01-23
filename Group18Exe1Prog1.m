@@ -41,9 +41,3 @@ Group18Exe1Fun1(autumn_bikes,"Autumn");
 %fainetai apo thn timh p kai epalhtheyetai kai apo to grafhma. Thn
 %xeiroterh exei to fthinwporo
 
-%Exei dhmioyrghthei ena arxeio distributions.dat to opoio emperiexetai sta arxeia poy
-%anebhkan kai oysiastika exei ola ta onomata twn diathesimwn katanomwn poy
-%mporei na xrhsimopoieisei h fidtist. epilexthke na ginei etsi gia na mhn
-%yparxei enas megalos pinakas eswterika ths synarthshs. Parola ayta, se
-%periptwsh poy den epithymeitai kati tetoio, o antistoixos pinakas yparxei
-%ws sxolio sthn synarthsh Group18Exe1Fun1
