@@ -99,7 +99,6 @@ Group18Exe8Fun3(hour_array,h,row_names_h);
 %gia to zeygari winter-autumn
 %paratiroume oti gia to sygkekrimeno zeygari isxyoun oti eipame gia kai to
 %zeygari winter-spring. 
-% BAZO COPY PASTE SXEDON TA IDIA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % Paratiroume oti exoun paromoio adjR2 gia oles tis ores ektos apo tis
 %apogeymatobradines(19 - 22), to opoio einia logiko giati aytes oi 2 epoxes
 %emfanizoun paromoies kairikes synthikes tis ypoloipoes ores, diladi kai
@@ -132,7 +131,6 @@ Group18Exe8Fun3(hour_array,h,row_names_h);
 %gia to zeygari summer-autumn
 %paratiroume oti gia to sygkekrimeno zeygari isxyoun oti eipame gia kai to
 %zeygari spring-summer. 
-%BAZO COPY PASTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %%paratiroume oti gia tis perissoteres ores to adjR2 diaferei stis 2 epoxes,
 %kati pou isos ofeiletai sto gegonos oti to fthinoporo o kairos den einai
 %toso kalos oso to kalokairi me apotelesma mia meiosi px tis thermokrasias
@@ -150,7 +148,7 @@ Group18Exe8Fun3(hour_array,h,row_names_h);
 
 for i=1:4
     subplot(4,1,i);
-    plot(1:24,adjR2(i,:));
+    plot(1:24,adjR2(i,:),"LineWidth",1.5);
     xlabel("Hours");
     ylabel("adjR2");
     title(row_names_adjR2(i));

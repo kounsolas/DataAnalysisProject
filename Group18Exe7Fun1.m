@@ -11,10 +11,6 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour,h
     y = bikes_temperature_hour(:,1); %bikes eksartimeni
     n=length(x);
     k=1; %arithmos aneksartiton metabliton
-    
-    %Bazw oles tis epiloges gt den mporw na prozarmozw ta dedomena ana wra 
-    % Isws afoy eblepa poy exei to mesgisto na epaiza meta me mirkoallages gia
-    % beltiwsh
 
     %Transformations for x,y
     x_options=[x x.^2 x.^3 x.^4 exp(0.01*x) exp(0.1*x)];
@@ -68,7 +64,6 @@ function [maxadjR2,option_x,option_y,k]=Group18Exe7Fun1(bikes_temperature_hour,h
      option_y=y_names(col_y);
     
     %paroysiash grafika
-    %isws na mhn einai aparaithth. Na thn svhsoyme?
     figure();
     scatter(x_options(:,row_x),y_options(:,col_y));
     xlabel("Temperature");

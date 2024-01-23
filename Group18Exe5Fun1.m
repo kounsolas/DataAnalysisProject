@@ -40,10 +40,7 @@ end
 
 a=0.05;
 n=length(bikes);
-%nomizo edo yparxei lathos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%etsi ops to exeis eisai ektos tou for loop kai kaneis oti kaneis mono gia
-%ena r, to teleytaio dld to r(24)
-%z=0.5*log((1+r(i))/(1-r(i)));
+
 z=0.5*log((1+r)./(1-r)); %5.3
 t=norminv(1-a/2);
 
@@ -51,9 +48,6 @@ t=norminv(1-a/2);
 
 low_z=z-t*sqrt(1/(n-3)); %vectors
 high_z=z+t*sqrt(1/(n-3)); %vectors
-
-low_r=(exp(2.*low_z)-1)./(exp(2.*low_z)+1); %vectors 5.4
-high_r=(exp(2*high_z)-1)/(exp(2*high_z)+1); %vectors 5.4
 
 t = r .* sqrt((n-2)./(1-r.^2));
 tc = tinv(1-a/2, n-2);
